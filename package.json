@@ -4,14 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "send:server": "nodemon src/server.ts",
+    "worker:server": "nodemon src/worker.ts",
+    "webhook:server": "nodemon src/webhook-server.ts",
+    "webhook:worker": "nodemon src/webhook-worker.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Andrii Zilnyk",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "@types/express": "4.17.21",
+    "nodemon": "3.1.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "@bull-board/api": "5.14.1",
+    "@bull-board/express": "5.14.1",
+    "axios": "1.6.7",
+    "bullmq": "5.3.1",
+    "express": "4.18.2"
   }
 }
